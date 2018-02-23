@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 public class Program
 {
+    static List<Team> teams = new List<Team>();
     static void Main(string[] args)
-    {
-        
-            Dictionary<string, List<Player>> teams = new Dictionary<string, List<Player>>();
+    {                   
             string input = Console.ReadLine();
             while (input != "END")
             {
@@ -20,16 +19,16 @@ public class Program
                 switch (data[0])
                 {
                     case "Team":
-                        AddTeam(data[1], teams);
+                        AddTeam(data[1]);
                         break;
                     case "Add":
-                        AddPlayer(data, teams);
+                        AddPlayer(data);
                         break;
                     case "Remove":
-                        RemovePlayer(data, teams);
+                        RemovePlayer(data);
                         break;
                     case "Rating":
-                        Rating(data, teams);
+                        Rating(data);
                         break;
                 }
             }
@@ -41,19 +40,19 @@ public class Program
             } 
     }
 
-    public static void AddTeam(string team, Dictionary<string, List<Player>> teams)
+    public static void AddTeam(string teamName)
     {
-        if (!teams.ContainsKey(team))
+        if (!teams.Any(t => t.Name == teamName))
         {
-            teams[team] = new List<Player>();
+            teams.Add(new Team(teamName));
         }
     }
-    public static void AddPlayer(string[] data, Dictionary<string, List<Player>> teams)
+    public static void AddPlayer(string[] data)
     {
-        string team = data[1];
-        if (!teams.ContainsKey(team))
+        Team team = teams.FirstOrDefault(t => t.Name == data[1]);
+        if (team == null)
         {
-            throw new ArgumentException("Team [team name] does not exist.");
+            throw new ArgumentException($"Team {data[1]} does not exist.");
         }
         string playerName = data[2];
         int endurance = int.Parse(data[3]);
@@ -63,48 +62,22 @@ public class Program
         int shooting = int.Parse(data[7]);
         Stat playerStat = new Stat(endurance, sprint, dribble, passing, shooting);
         Player newPlayer = new Player(playerName, playerStat);
-        teams[team].Add(newPlayer);
+        team.AddPlayer(newPlayer);
     }
-    public static void Rating(string[] data, Dictionary<string, List<Player>> teams)
+    public static void Rating(string[] data)
     {
-        string team = data[1];
-        int rating = 0;
-        if (teams[team].Count() > 0)
+        Team team = teams.FirstOrDefault(t => t.Name == data[1]);
+        if (team == null)
         {
-            rating = (int)Math.Round((teams[team].Average(p => p.Statistics.Skill)));
-        }        
-        Console.WriteLine($"{team} - {rating}");
+            throw new ArgumentException($"Team {data[1]} does not exist.");
+        }
+
+        Console.WriteLine($"{data[1]} - {team.Rating()}");
     }
-    public static void RemovePlayer(string[] data, Dictionary<string, List<Player>> teams)
+    public static void RemovePlayer(string[] data)
     {
-        string team = data[1];
+        Team team = teams.FirstOrDefault(t => t.Name == data[1]);
         string playerName = data[2];
-        if (!teams.ContainsKey(team))
-        {
-            Console.WriteLine($"Team {team} does not exist.");
-        }
-        else
-        {
-            int count = teams[team].Count();
-            int index = 0;
-            bool toRemove = false;
-            for (int i = 0; i < count; i++)
-            {
-                if (teams[team][i].Name == playerName)
-                {
-                    index = i;
-                    toRemove = true;
-                    break;
-                }
-            }
-            if (toRemove)
-            {
-                teams[team].RemoveAt(index);
-            }
-            else
-            {
-                Console.WriteLine($"Player {playerName} is not in {team} team.");
-            }
-        }
+        team.RemovePlayer(playerName);       
     }
 }

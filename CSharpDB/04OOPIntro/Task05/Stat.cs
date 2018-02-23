@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 public class Stat
@@ -75,10 +71,9 @@ public class Stat
             this.shooting = value;
         }
     }
-    public int Skill
+    public int Summary
     {
-        get { return this.summary; }
-        private set { this.summary = value; }
+        get { return (int)Math.Round((this.endurance + this.sprint + this.dribble + this.passing + this.shooting) / 5.0); }        
     }
 
 
@@ -88,8 +83,7 @@ public class Stat
         this.Sprint = sprint;
         this.Dribble = dribble;
         this.Passing = passing;
-        this.Shooting = shooting;
-        this.Skill = (int)Math.Round((this.endurance + this.sprint + this.dribble + this.passing + this.shooting) / 5.0);
+        this.Shooting = shooting;        
     }
 
 }

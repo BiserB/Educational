@@ -33,10 +33,29 @@ public class Team
         this.players = new List<Player>();
     }
     
-    public void AddPlayer(string input)
+    public void AddPlayer(Player player)
     {
-
+        players.Add(player);
     }
 
+    public void RemovePlayer(string playerName)
+    {
+        Player player = Players.FirstOrDefault(p => p.Name == playerName);
+        if (player == null)
+        {
+            throw new ArgumentException($"Player {playerName} is not in {this.Name} team.");
+        }
+        Players.Remove(player);
+    }
+
+    public int Rating()
+    {
+        int rating = 0;
+        if (Players.Count > 0)
+        {
+            rating = (int)Math.Round(Players.Average(p => p.Statistics.Summary));
+        }
+        return rating;
+    }
 
 }
