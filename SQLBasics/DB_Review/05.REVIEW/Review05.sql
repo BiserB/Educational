@@ -103,7 +103,7 @@ SELECT * FROM WizzardDeposits
 
 ------------------------------------------------------13
 USE SoftUni
-go
+GO
 
 SELECT E.DepartmentID,
 		SUM(E.Salary) AS TotalSalary
