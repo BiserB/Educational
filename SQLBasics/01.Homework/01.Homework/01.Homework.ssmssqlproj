@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="01.Homework">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="V310LENOVO:V310LENOVO\Biser">
+          <Created>2017-09-20T15:02:33.31985+03:00</Created>
+          <Type>SQL</Type>
+          <Server>V310LENOVO</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>Minions</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="01-06.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>01-06.sql</FullPath>
+        </FileNode>
+        <FileNode Name="07-13.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>07-13.sql</FullPath>
+        </FileNode>
+        <FileNode Name="14.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>14.sql</FullPath>
+        </FileNode>
+        <FileNode Name="15.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>15.sql</FullPath>
+        </FileNode>
+        <FileNode Name="16.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>16.sql</FullPath>
+        </FileNode>
+        <FileNode Name="BasicCRUD.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>BasicCRUD.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Softuni.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Softuni.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

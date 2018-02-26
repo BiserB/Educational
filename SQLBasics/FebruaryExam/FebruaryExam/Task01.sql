@@ -1,0 +1,59 @@
+CREATE DATABASE Bakery
+GO
+USE Bakery
+GO
+
+CREATE TABLE Products(
+[Id] INT PRIMARY KEY IDENTITY NOT NULL,
+[Name] NVARCHAR(25) NOT NULL UNIQUE,
+[Description] NVARCHAR(250),
+[Recipe] NVARCHAR(MAX),
+[Price] MONEY CHECK(Price > 0)
+)
+
+CREATE TABLE Countries(
+[Id] INT PRIMARY KEY IDENTITY NOT NULL,
+[Name] NVARCHAR(50) NOT NULL UNIQUE,
+)
+
+CREATE TABLE Customers(
+[Id] INT PRIMARY KEY IDENTITY NOT NULL,
+[FirstName] NVARCHAR(25) NOT NULL,
+[LastName] NVARCHAR(25) NOT NULL,
+[Gender] CHAR(1) CHECK(Gender IN('M', 'F')),
+[Age] INT,
+[PhoneNumber] CHAR(10),
+[CountryId] INT FOREIGN KEY REFERENCES Countries(Id)
+)
+
+CREATE TABLE Feedbacks(
+[Id] INT PRIMARY KEY IDENTITY NOT NULL,
+[Description] NVARCHAR(255),
+[Rate] DECIMAL(15,2) CHECK(Rate BETWEEN 0 AND 10) NOT NULL,
+[ProductId] INT FOREIGN KEY REFERENCES Products(Id),
+[CustomerId] INT FOREIGN KEY REFERENCES Customers(Id)
+)
+
+CREATE TABLE Distributors(
+[Id] INT PRIMARY KEY IDENTITY NOT NULL,
+[Name] NVARCHAR(25) UNIQUE NOT NULL,
+[AddressText] NVARCHAR(30) NOT NULL,
+[Summary] NVARCHAR(200) NOT NULL,
+[CountryId] INT FOREIGN KEY REFERENCES Countries(Id)
+)
+
+CREATE TABLE Ingredients(
+[Id] INT PRIMARY KEY IDENTITY NOT NULL,
+[Name] NVARCHAR(30) NOT NULL,
+[Description] NVARCHAR(200) NOT NULL,
+[OriginCountryId] INT FOREIGN KEY REFERENCES Countries(Id),
+[DistributorId] INT FOREIGN KEY REFERENCES Distributors(Id)
+)
+
+CREATE TABLE ProductsIngredients(
+[ProductId] INT,
+[IngredientId] INT,
+CONSTRAINT PK_ProductsIngredients PRIMARY KEY (ProductId,IngredientId),
+FOREIGN KEY (ProductId) REFERENCES Products(Id),
+FOREIGN KEY (IngredientId) REFERENCES Ingredients(Id)
+)

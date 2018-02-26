@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="FebruaryExam">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="V310LENOVO:V310LENOVO\Biser">
+          <Created>2018-01-02T17:58:43.1306069+02:00</Created>
+          <Type>SQL</Type>
+          <Server>V310LENOVO</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Skelet.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Skelet.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task01.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task01.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task02.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task02.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task05.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task05.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task06.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task06.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task07.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task07.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task08.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task08.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task09.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task09.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task10.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task10.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task11.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task11.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task12.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task12.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task13.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task13.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task14.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task14.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Task15.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:V310LENOVO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>V310LENOVO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Task15.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
