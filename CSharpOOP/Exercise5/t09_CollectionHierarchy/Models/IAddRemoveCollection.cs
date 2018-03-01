@@ -1,8 +1,6 @@
 ﻿
-using System.Collections.Generic;
-
-public interface IAddRemoveCollection : IList<string>
+interface IAddRemoveCollection
 {
-    void Add();
-    void Remove();
+    int Add(string str);
+    string Remove(string str);
 }

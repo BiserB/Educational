@@ -1,7 +1,4 @@
-﻿
-using System.Collections.Generic;
-
-public interface IAddCollection: IList<string>
+﻿public interface IAddCollection
 {
-   void Add();
+    int Add(string str);
 }
