@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 public class Seat : ICar
 {
@@ -8,22 +7,24 @@ public class Seat : ICar
         Model = model;
         Color = color;
     }
-    public string Model { get ; set ; }
-    public string Color { get ; set ; }
+
+    public string Model { get; set; }
+    public string Color { get; set; }
 
     public string Start()
     {
         return "Engine start";
     }
+
     public string Stop()
     {
         return "Breaaak!";
     }
+
     public override string ToString()
     {
-        string result = $"{Color} Seat {Model}" + Environment.NewLine ;
-        result += Start() + Environment.NewLine + Stop();        
+        string result = $"{Color} Seat {Model}" + Environment.NewLine;
+        result += Start() + Environment.NewLine + Stop();
         return result;
     }
-
 }

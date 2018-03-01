@@ -29,7 +29,7 @@ public class Rectangle : IDrawable
         for (int i = 1; i < this.Height - 1; ++i)
         {
             DrawLine(this.Width, '*', ' ');
-        }            
+        }
         DrawLine(this.Width, '*', '*');
     }
 
@@ -39,7 +39,7 @@ public class Rectangle : IDrawable
         for (int i = 1; i < width - 1; ++i)
         {
             Console.Write(mid);
-        }            
+        }
         Console.WriteLine(end);
     }
 }

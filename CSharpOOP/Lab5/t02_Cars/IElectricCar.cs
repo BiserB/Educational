@@ -1,5 +1,4 @@
-﻿
-public interface IElectricCar
+﻿public interface IElectricCar
 {
     int Battery { get; set; }
 }
