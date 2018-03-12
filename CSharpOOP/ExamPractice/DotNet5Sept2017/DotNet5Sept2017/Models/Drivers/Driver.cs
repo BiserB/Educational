@@ -4,20 +4,15 @@
 // FuelConsumptionPerKm – a floating-point number
 // Speed – a floating-point number
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-
 public class Driver
 {
     private string name;
-    private decimal totalTime;
+    private double totalTime;
     private Car car;
-    private decimal fuelConsumptionPerKm;
-    private decimal speed;
+    private double fuelConsumptionPerKm;
+    private double speed;
 
-    public Driver(string name, decimal totalTime, Car car, decimal fuelConsumptionPerKm)
+    public Driver(string name, double totalTime, Car car, double fuelConsumptionPerKm)
     {
         Name = name;
         TotalTime = totalTime;
@@ -31,28 +26,32 @@ public class Driver
         get { return name; }
         set { name = value; }
     }
-    public decimal TotalTime
+
+    public double TotalTime
     {
         get { return totalTime; }
         set { totalTime = value; }
     }
+
     public Car Car
     {
         get { return car; }
         set { car = value; }
     }
-    public decimal FuelConsumptionPerKm
+
+    public double FuelConsumptionPerKm
     {
         get { return fuelConsumptionPerKm; }
         set { fuelConsumptionPerKm = value; }
     }
-    public decimal Speed
+
+    public double Speed
     {
         get { return CalcSpeed(); }
         set { speed = CalcSpeed(); }
     }
 
-    private decimal CalcSpeed()
+    private double CalcSpeed()
     {
         return (car.Hp + car.TyreType.Degradation) / car.FuelAmount;
     }
