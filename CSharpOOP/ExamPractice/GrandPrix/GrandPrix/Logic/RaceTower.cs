@@ -7,7 +7,7 @@ using System.Text;
 public class RaceTower
 {
     private readonly int BOX_TIME = 20;
-    private Track track;
+    public Track track;
     private List<Driver> racingDrivers;
     private Stack<Driver> failedDrivers;
 
@@ -128,7 +128,7 @@ public class RaceTower
 
             bool agressiveSoft = slowestDriver is AggressiveDriver && slowestDriver.Car.Tyre is UltrasoftTyre;
             bool enduranceHard = slowestDriver is EnduranceDriver && slowestDriver.Car.Tyre is HardTyre;
-            bool crashed = (agressiveSoft && track.Weather == Weather.Foggy) || (agressiveSoft && track.Weather == Weather.Rainy);
+            bool crashed = (agressiveSoft && track.Weather == Weather.Foggy) || (enduranceHard && track.Weather == Weather.Rainy);
 
             if (agressiveSoft || enduranceHard)
             {
@@ -141,18 +141,17 @@ public class RaceTower
                 {
                     slowestDriver.Fail("Crashed");
                     failedDrivers.Push(slowestDriver);
-                    orderedDrivers.RemoveAt(i);
-                    i--;
-                    continue;
+                    racingDrivers.Remove(slowestDriver);                                        
                 }
-                
-                fastestDriver.AddTime(interval);
-                slowestDriver.ReduceTime(interval);
-                i++;
-                sb.AppendLine( $"{slowestDriver.Name} has overtaken {fastestDriver.Name} on lap {track.CurrentLap}.");
+                else
+                {
+                    fastestDriver.AddTime(interval);
+                    slowestDriver.ReduceTime(interval);
+                    i++;
+                    sb.AppendLine($"{slowestDriver.Name} has overtaken {fastestDriver.Name} on lap {track.CurrentLap}.");
+                }                
             }
         }
-        racingDrivers = orderedDrivers;
 
         return sb.ToString().TrimEnd();
     }        
@@ -180,7 +179,7 @@ public class RaceTower
         if (Enum.TryParse(commandArgs[0], out Weather newWeather))
         {
             track.SetWeather(newWeather);
-        }        
+        }
     }
 
     public string Finish()

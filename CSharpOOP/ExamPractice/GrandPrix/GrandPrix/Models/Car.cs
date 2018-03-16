@@ -36,7 +36,7 @@ public class Car
             {
                 throw new ArgumentException("Out of fuel");
             }
-            if (value < MAX_TANK_CAPACITY)
+            if (value <= MAX_TANK_CAPACITY)
             {
                 fuelAmount = value;
             }

@@ -10,7 +10,7 @@ public abstract class Driver
     protected Driver(string name, Car car, double fuelConsumptionPerKm)
     {
         Name = name;
-        TotalTime = 0;
+        TotalTime = 0.0d;
         Car = car;
         FuelConsumptionPerKm = fuelConsumptionPerKm;
         IsRacing = true;

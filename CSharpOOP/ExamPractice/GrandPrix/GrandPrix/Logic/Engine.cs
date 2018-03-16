@@ -53,6 +53,9 @@ public class Engine
             Console.WriteLine(result);
         }
 
-        
+        if (tower.track.CurrentLap == tower.track.RaceLaps)
+        {
+            Environment.Exit(0);
+        }
     }
 }
