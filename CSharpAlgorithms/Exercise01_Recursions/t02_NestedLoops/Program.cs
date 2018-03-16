@@ -1,4 +1,7 @@
-﻿using System;
+﻿// A program that simulates the execution of n nested loops from 1 to n which prints the values
+//  of all its iteration variables at any given time on a single line.
+
+using System;
 
 public class Program
 {
@@ -16,9 +19,9 @@ public class Program
             Console.WriteLine(string.Join(" ", arr));
             return;
         }
-        for (int i = 0; i < arr.Length; i++)
+        for (int i = 1; i <= arr.Length; i++)
         {
-            arr[index] = i + 1;
+            arr[index] = i;
             Loop(arr, index + 1);
         }
     }
