@@ -7,37 +7,36 @@ using System.Collections.Generic;
 
 public class Program
 {
-    //private static int start = 1;
-
+    
     static void Main()
     {        
-        int end = int.Parse(Console.ReadLine());
+        int endNum = int.Parse(Console.ReadLine());
         int range = int.Parse(Console.ReadLine());
         
         int[] arr = new int[range];
 
-        FillArr(arr, 0, end);
+        for (int startNum = 1; startNum <= endNum; startNum++)
+        {
+            FillArr(arr, 0, startNum, endNum);
+        }
+
+        
     }
 
-    private static void FillArr(int[] arr, int index, int end)
+    private static void FillArr(int[] arr, int index, int startNum, int endNum)
     {
-        int start = 1;
-
+        
         if (index == arr.Length)
         {
-            Console.WriteLine(string.Join(" ", arr));
-            if (arr[arr.Length - 1] == end)
-            {
-                //start++;
-            }
+            Console.WriteLine(string.Join(" ", arr));            
             return;
         }
         else
         {
-            for (int i = start; i <= end; i++)
+            for (int i = startNum; i <= endNum; i++)
             {
                 arr[index] = i;
-                FillArr(arr, index + 1, end);
+                FillArr(arr, index + 1, startNum, endNum);
             }
         }            
     }
