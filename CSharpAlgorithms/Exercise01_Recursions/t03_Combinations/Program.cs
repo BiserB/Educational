@@ -12,14 +12,12 @@ public class Program
     {        
         int endNum = int.Parse(Console.ReadLine());
         int range = int.Parse(Console.ReadLine());
-        
+        int startNum = 1;
+
         int[] arr = new int[range];
 
-        for (int startNum = 1; startNum <= endNum; startNum++)
-        {
-            FillArr(arr, 0, startNum, endNum);
-        }
 
+        FillArr(arr, 0, startNum, endNum);
         
     }
 
@@ -31,13 +29,13 @@ public class Program
             Console.WriteLine(string.Join(" ", arr));            
             return;
         }
-        else
+
+        for (int i = startNum; i <= endNum; i++)
         {
-            for (int i = startNum; i <= endNum; i++)
-            {
-                arr[index] = i;
-                FillArr(arr, index + 1, startNum, endNum);
-            }
-        }            
+            arr[index] = i;
+            FillArr(arr, index + 1, startNum, endNum);
+            startNum++;
+        }
+        
     }
 }

@@ -4,9 +4,9 @@ class CombinationsGenerator
 {
     static void Main()
     {
-        int n = 3;
-        int startNum = 4;
-        int endNum = 8;
+        int n = 2;
+        int startNum = 1;
+        int endNum = 3;
 
         int[] arr = new int[n];
         GenCombs(arr, 0, startNum, endNum);

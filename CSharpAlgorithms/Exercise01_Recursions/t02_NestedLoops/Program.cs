@@ -19,6 +19,7 @@ public class Program
             Console.WriteLine(string.Join(" ", arr));
             return;
         }
+
         for (int i = 1; i <= arr.Length; i++)
         {
             arr[index] = i;

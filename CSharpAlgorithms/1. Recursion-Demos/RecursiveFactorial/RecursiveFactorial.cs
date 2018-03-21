@@ -17,9 +17,7 @@ class RecursiveFactorial
         {
             return 1;
         }
-        else
-        {
-            return n * Factorial(n - 1);
-        }
+        decimal f = n * Factorial(n - 1);
+        return f;
     }
 }
