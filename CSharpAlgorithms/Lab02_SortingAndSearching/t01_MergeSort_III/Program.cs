@@ -1,11 +1,15 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public static class Mergesorter
+class Program
 {
-   public static List<int> MergeSort(List<int> numbers)
+    static void Main()
+    {
+
+    }
+
+    public static List<int> MergeSort(List<int> numbers)
     {
         if (numbers.Count <= 1)
         {
@@ -32,7 +36,7 @@ public static class Mergesorter
 
         return SortAndMerge(left, right);
 
-        }
+    }
 
     private static List<int> SortAndMerge(List<int> left, List<int> right)
     {
@@ -69,8 +73,5 @@ public static class Mergesorter
     {
         return list.Count > 0;
     }
+
 }
-
-
-
- 
