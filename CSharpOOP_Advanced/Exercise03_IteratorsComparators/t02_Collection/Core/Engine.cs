@@ -21,56 +21,49 @@ public class Engine
         string[] elements = args.Skip(1).ToArray();
         var listy = factory.Create(elements);
 
-        try
-        {
-            string command = reader.ReadLine();
 
-            while (command != "END")
+        string command = reader.ReadLine();
+
+        while (command != "END")
+        {
+            string result = "";
+
+            switch (command)
             {
-                string result = "";
+                case "Move":
+                    result = listy.Move().ToString();
+                    break;
 
-                switch (command)
-                {
-                    case "Move":
-                        result = listy.Move().ToString();
-                        writer.WriteLine(result);
-                        break;
+                case "HasNext":
+                    result = listy.HasNext().ToString();
+                    break;
 
-                    case "HasNext":
-                        result = listy.HasNext().ToString();
-                        writer.WriteLine(result);
-                        break;
+                case "Print":
+                    try
+                    {
+                        result = listy.Print();
+                    }
+                    catch (InvalidOperationException ioe)
+                    {
+                        result = ioe.Message;
+                    }
+                    break;
 
-                    case "Print":
-                        listy.Print();
-                        break;
-
-                    case "PrintAll":
-
-                        result = string.Join(" ", listy);
-
-                        if (!string.IsNullOrWhiteSpace(result))
-                        {
-                            writer.WriteLine(result);
-                        }
-
-                        break;
-
-                    default:
-                        throw new ArgumentException("Wrong command");
-                }
+                case "PrintAll":
+                    result = string.Join(" ", listy);
+                    break;
                 
-                command = reader.ReadLine();
             }
+
+            if (result != "")
+            {
+                writer.WriteLine(result);
+            }
+
+
+            command = reader.ReadLine();
         }
-        catch (ArgumentException ae)
-        {
-            writer.WriteLine(ae.Message);
-        }
-        catch (InvalidOperationException ioe)
-        {
-            writer.WriteLine(ioe.Message);
-        }
+       
 
     }
 }

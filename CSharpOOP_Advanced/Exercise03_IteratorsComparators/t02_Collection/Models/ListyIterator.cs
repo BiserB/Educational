@@ -30,13 +30,13 @@ public class ListyIterator<T> : IEnumerable<T>
         return currentindex + 1 < content.Count;
     }
 
-    public void Print()
+    public string Print()
     {
-        if (currentindex == content.Count)
+        if (currentindex == content.Count || currentindex < 0)
         {
             throw new InvalidOperationException("Invalid operation");
         }
-        Console.WriteLine(content[currentindex]);
+        return content[currentindex].ToString();
     } 
 
     public IEnumerator<T> GetEnumerator()
