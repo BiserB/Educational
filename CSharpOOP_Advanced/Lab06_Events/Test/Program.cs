@@ -7,10 +7,10 @@ namespace Test
         static void Main()
         {            
             var video = new Video() { Title = "Video 1"};
-            var videoEncoder = new VideoEncoder();
-            var mailService = new MailService();
-            var messageService = new MessageService();
-            
+            var videoEncoder = new VideoEncoder();      // publisher
+            var mailService = new MailService();        // subscriber
+            var messageService = new MessageService();  // subscriber
+
             videoEncoder.VideoEncoded += mailService.OnVideoEncoded;
             videoEncoder.VideoEncoded += messageService.OnVideoEncoded;
 
