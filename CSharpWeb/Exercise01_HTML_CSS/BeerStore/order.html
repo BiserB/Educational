@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <title>SoftUni Beers</title>
+</head>
+<body>
+    <nav class="topnav">
+        <a href="index.html" class="logo"><img src="/images/logo.png" /></a>
+        <a href="index.html" class="active">Home</a>
+        <a href="allbeers.html">See All Beers</a>
+        <a href="order.html">Order a Beer</a>
+        <a href="register.html" class="right">Register</a>
+        <a href="login.html" class="right">Log in</a>
+    </nav>
+
+    <main>
+        <h1>Order A Beer</h1>
+        <form class="form">
+            <label>Brand</label>
+            <select>
+                <option selected disabled>Select a brand</option>
+                <option>Corona Extra 330ml</option>
+                <option>Stella Artois 500ml</option>
+                <option>Carlsberg 330ml</option>
+                <option>Heineken 330ml</option>
+            </select><br />
+
+            <label>Quantity</label>                            
+            <input type="number" min="1" max="15" placeholder="Enter amount of beer (1-15)"/>           
+        </form>
+    </main>
+
+    <footer>
+        <hr />
+        <p><em>&copy; 2018 &ndash; SoftUni Beers</em></p>
+    </footer>
+</body>
+</html>

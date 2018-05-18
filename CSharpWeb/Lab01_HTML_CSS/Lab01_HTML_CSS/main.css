@@ -1,0 +1,26 @@
+﻿div{
+    display:inline-block;
+}
+
+.inner {
+    font-size:30px;
+    border:solid 2px;
+    border-color:green;    
+    padding:20px;
+    text-align:center;
+    border-radius:6px;
+}
+
+.middle {
+    border: 2px dashed;
+    border-color: red;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.outer {
+    border: 2px dotted;
+    border-color: blue;
+    padding: 20px;
+    border-radius: 18px;
+}
