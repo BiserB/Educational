@@ -6,7 +6,7 @@ namespace t03_RequestParser
 {
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             var urls = ReadURLs();
 
@@ -45,19 +45,18 @@ namespace t03_RequestParser
 
             string method = input[0].ToLower();
             string path = input[1].ToLower();
-            string http = input[2];
+            string scheme = input[2];
             string statusText = "OK";
 
             if (urls.ContainsKey(path) && urls[path].Contains(method))
             {
-                Console.WriteLine($"{http} 200 OK");
+                Console.WriteLine($"{scheme} 200 OK");
             }
             else
             {
                 statusText = "Not Found";
-                Console.WriteLine($"{http} 404 NotFound");
+                Console.WriteLine($"{scheme} 404 NotFound");
             }
-
             
             Console.WriteLine($"Content-Length: {statusText.Length}");
             Console.WriteLine("Content-Type: text/plain\n");
