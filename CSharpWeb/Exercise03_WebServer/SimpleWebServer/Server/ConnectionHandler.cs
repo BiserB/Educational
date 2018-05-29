@@ -60,6 +60,11 @@ namespace SimpleWebServer.Server
                 }
             }
 
+            if (request.Length == 0)
+            {
+                return null;
+            }
+
             return request;
         }
     }
