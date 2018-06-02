@@ -42,7 +42,9 @@ namespace SimpleMVC.Server.HTTP.Response
             sb.AppendLine(this.HeaderCollection.ToString());
             sb.AppendLine();
 
-            return sb.ToString();
+            string result = sb.ToString();
+
+            return result;
         }
     }
 }

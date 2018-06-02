@@ -17,7 +17,7 @@ namespace SimpleMVC.Application
             appRouteConfig.Post("/register", request => new UserController()
                           .RegisterPost(request.FormData["name"]));
 
-            appRouteConfig.Get("/user/{(?<name>[a-z]+)}", request => new UserController()
+            appRouteConfig.Get("/user/{(?<name>\\w+)}", request => new UserController()
                           .Details(request.UrlParameters["name"]));
         }
     }

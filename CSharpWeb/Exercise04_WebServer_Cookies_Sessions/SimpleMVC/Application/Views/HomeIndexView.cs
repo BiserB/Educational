@@ -6,7 +6,8 @@ namespace SimpleMVC.Application.Views
     {
         public string View()
         {
-            return "<body><h1>Welcome!</h1></body>";
+            return "<body><h1>Welcome!</h1><p></p>" +
+                "<a href=\"/register\">Register</a></body>";
         }
     }
 }

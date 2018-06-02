@@ -15,7 +15,7 @@ namespace SimpleMVC.Server.HTTP
 
         public static HttpSession Get(string id)
         {
-            return sessions.GetOrAdd(id, query => new HttpSession(id));
+            return sessions.GetOrAdd(id, _ => new HttpSession(id));
         }
 
         public static string GetSesions()

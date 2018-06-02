@@ -9,23 +9,21 @@ namespace SimpleMVC.Server.Routing
 {
     public class ServerRouteConfig : IServerRouteConfig
     {
-        private readonly IDictionary<HttpRequestMethod, Dictionary<string, IRoutingContext>> routes;
-
         public ServerRouteConfig(IAppRouteConfig appRouteConfig)
         {
-            this.routes = new Dictionary<HttpRequestMethod, Dictionary<string, IRoutingContext>>();
+            this.Routes = new Dictionary<HttpRequestMethod, Dictionary<string, IRoutingContext>>();
 
             foreach (int num in Enum.GetValues(typeof(HttpRequestMethod)))
             {
                 HttpRequestMethod method = (HttpRequestMethod)num;
 
-                routes[method] = new Dictionary<string, IRoutingContext>();
+                Routes[method] = new Dictionary<string, IRoutingContext>();
             }
 
             this.InitializeServerConfig(appRouteConfig);
         }
 
-        public IDictionary<HttpRequestMethod, Dictionary<string, IRoutingContext>> Routes => this.routes;
+        public IDictionary<HttpRequestMethod, Dictionary<string, IRoutingContext>> Routes { get; }
 
         private void InitializeServerConfig(IAppRouteConfig appRouteConfig)
         {
@@ -45,7 +43,7 @@ namespace SimpleMVC.Server.Routing
 
                     var routingContext = new RoutingContext(parameters, handler);
 
-                    this.routes[requestMethod].Add(parsedRouteRegex, routingContext);
+                    this.Routes[requestMethod].Add(parsedRouteRegex, routingContext);
                 }
             }
         }

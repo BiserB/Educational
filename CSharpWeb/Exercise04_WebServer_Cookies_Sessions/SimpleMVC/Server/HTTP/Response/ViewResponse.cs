@@ -23,7 +23,7 @@ namespace SimpleMVC.Server.HTTP.Response
 
             if (codeOfStatus < 300 || codeOfStatus >= 400)
             {
-                result += Environment.NewLine + this.view.View();
+                result += this.view.View();
             }
 
             return result;

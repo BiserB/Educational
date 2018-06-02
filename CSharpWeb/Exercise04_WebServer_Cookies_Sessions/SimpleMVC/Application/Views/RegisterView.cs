@@ -7,8 +7,8 @@ namespace SimpleMVC.Application.Views
         public string View()
         {
             return "<body><form method=\"POST\"> " +
-                    "   Name</br>" +
-                    "   <input type=\"text\" name=\"name\"/></br>" +
+                    "   Name <em style=\"font-size:0.8em\">(Only letters,digits and underline)</em></br><p></p>" +
+                    "   <input type=\"text\" name=\"name\" pattern=\"\\w+\"/></br><p></p>" +
                     "   <input type=\"submit\"/>" +
                     "</form></body>";
         }

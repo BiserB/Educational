@@ -56,7 +56,9 @@ namespace SimpleMVC.Server.HTTP
                 }
             }
 
-            return result.ToString().TrimEnd();
+            string res = result.ToString().TrimEnd();
+
+            return res;
         }
     }
 }
