@@ -1,0 +1,20 @@
+﻿<h4><a href="/">Home</a></h4>
+
+<form method="post">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Name" />
+    <p></p>
+    <label for="price">Price:</label>
+    <input type="number" min="0" name="price" placeholder="Price" />
+    <p></p>
+    <label for="imageUrl">Image URL:</label>
+    <input type="text" name="imageUrl" placeholder="Image Url" />
+    <p></p>
+    <input type="submit" value="Add Cake" class="button" />
+</form>
+
+<div style="display: {{{showResult}}}">
+    Name: {{{name}}} <br />
+    Price: {{{price}}} <br />
+     <img src="{{{image}}}" alt="Image for {{{name}}}" />
+</div>

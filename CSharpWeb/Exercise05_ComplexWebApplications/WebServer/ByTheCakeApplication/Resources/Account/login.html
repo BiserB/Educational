@@ -1,0 +1,16 @@
+﻿<h2>Login<a href="/register" class="upper">Register</a></h2>
+
+<form method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" placeholder="Username" />
+    <p></p>
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Password" />
+    <p></p>
+    <input type="submit" value="Login" class="button" />
+    <p></p>
+</form>
+
+<div style="display: {{{showError}}}; color: red">
+    {{{error}}}
+</div>
