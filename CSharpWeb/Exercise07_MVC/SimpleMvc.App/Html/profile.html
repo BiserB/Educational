@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Profile</title>
+</head>
+<body>
+    <a href="/home/index">< Home</a>
+    <hr />
+    <a href="/user/register">Register new user</a>
+    <br />
+    <a href="/user/getUser">Get User Profile</a>
+    <br />
+    <a href="/user/all">List of users</a>
+    <br />
+    <h2>{{{username}}}</h2>
+    <br />
+    <form action="/user/profile" method="post">
+        <label for="Title">Title:</label><br />
+        <input type="text" name="Title" /><br />
+        <label for="Content">Content:</label><br />
+        <input type="text" name="Content" /><br />
+        <input type="hidden" name="UserId" value="{{{userId}}}" /><br />
+        <input type="submit" value="Add Note" />
+    </form>
+    <br />
+    <h3>List of Notes:</h3>
+    {{{allNotes}}}
+</body>
+</html>

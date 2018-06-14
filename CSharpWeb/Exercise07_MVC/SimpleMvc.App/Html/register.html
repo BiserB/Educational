@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+</head>
+<body>
+    <a href="/home/index">< Home</a>
+    <hr />
+    <h1>Register new user</h1>
+    <br />
+    <form action="/user/register" method="post">
+        <label for="username">Username</label><br />
+        <input type="text" name="Username" placeholder="Username" /><br />
+        <label for="password">Password</label><br />
+        <input type="password" name="Password" placeholder="Password" /><br />
+        <input type="submit" name="register" value="Register" />
+    </form>
+    <br />
+    <hr />
+    <a href="/user/all">List of users</a>
+    <br />
+    <a href="/user/getUser">Get User Profile</a>
+</body>
+</html>
