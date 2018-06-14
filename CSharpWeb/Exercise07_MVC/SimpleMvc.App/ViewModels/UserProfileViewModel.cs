@@ -1,5 +1,7 @@
 ﻿namespace SimpleMvc.App.ViewModels
 {
+    using System.Collections.Generic;
+
     public class UserProfileViewModel
     {
         public int UserId { get; set; }
