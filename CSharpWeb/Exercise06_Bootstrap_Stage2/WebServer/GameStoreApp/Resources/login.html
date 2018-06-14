@@ -1,0 +1,29 @@
+﻿<main class="col-4 ml-auto mr-auto text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center"><h1 class="display-3">Login</h1></div>
+                <br />
+                <form method="post">
+                    <div class="form-group row">
+                        <label for="eamil" class="sr-only">Email</label>
+                        <input class="form-control" name="email" type="text" placeholder="somebody@example.com" />
+                    </div>
+                    <div class="form-group row">
+                        <label for="password" class="sr-only">Password</label>
+                        <input class="form-control" name="password" type="password" id="pass" placeholder="Password" />
+                        <label class="btn btn-secondary btn-sm" style="background-color:lightgray" onclick="if (pass.type == 'text') pass.type = 'password';else pass.type = 'text';">show/hide</label>
+                    </div>
+
+                    <input type="submit" class="btn btn-outline-warning btn-lg btn-block"
+                           value="Login" />
+                </form>
+                <br />
+            </div>
+        </div>
+    </div>
+    <div style="display: {{{showError}}}; color: red" class="alert-info">
+        Error: {{{error}}}
+    </div>
+    <br />
+</main>
