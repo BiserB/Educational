@@ -1,0 +1,23 @@
+﻿<nav class="navbar navbar-expand-md navbar-text">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <strong>{1}</strong>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle button btn-sm btn-light" href="#" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                o
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <form method="get" action="/note/edit">
+                    <input type="hidden" name="Id" value="{0}">
+                    <button class="dropdown-item button btn-info" type="submit">Edit</button>
+                </form>
+                <form method="post" action="/note/delete">
+                    <input type="hidden" name="Id" value="{0}">
+                    <button class="dropdown-item button btn-info" type="submit">Delete</button>
+                </form>
+            </div>
+        </li>
+    </ul>
+</nav>
+<p>{2}</p>

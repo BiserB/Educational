@@ -1,0 +1,20 @@
+﻿<div class="container h-100">
+    <div class="alert alert-info col-sm-4 col-lg-6 ml-auto mr-auto text-center">
+        <span>{{{message}}}</span>
+    </div>
+    <div class="row h-100 justify-content-center align-items-center">
+        <form class="col-sm-4 col-lg-6" action="/note/new" method="post">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control form-control-lg" id="title" name="Title">
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea class="form-control form-control-lg" id="content" rows="3" name="Content"></textarea>
+            </div>
+            <div class="form-group">
+                <input class="button btn-lg btn-info" type="submit" value="Save" />
+            </div>
+        </form>
+    </div>
+</div>
