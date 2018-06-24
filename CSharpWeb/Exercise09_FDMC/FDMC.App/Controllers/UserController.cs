@@ -105,7 +105,7 @@ namespace FDMC.App.Controllers
 
                 this.SignIn(model.Username);
 
-                return new RedirectResult("/home/welcome");
+                return new RedirectResult("/home/wellcome");
             }
         }
                 

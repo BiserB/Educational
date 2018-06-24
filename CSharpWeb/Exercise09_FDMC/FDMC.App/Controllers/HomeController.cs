@@ -16,7 +16,7 @@ namespace FDMC.App.Controllers
         }
 
         [HttpGet]
-        public IActionResult Welcome()
+        public IActionResult Wellcome()
         {
             this.SetupLayoutHtml();
 
