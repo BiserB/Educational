@@ -45,7 +45,7 @@
             {
                 var client = await this.listener.AcceptSocketAsync();
                 var connectionHandler = new ConnectionHandler(client, this.requestHandler, this.resourceHandler);
-                await connectionHandler.ProcessRequestAsync();
+                connectionHandler.ProcessRequestAsync();
             }
         }
     }
