@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MeTube</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-toggleable-md navbar-dark bg-color-dark">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand h4" href="/">MeTube&trade;</a>
+
+                <div class="collapse navbar-collapse justify-content-end row" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active col-md-3">
+                            <a class="nav-link h5" href="/">Home</a>
+                        </li>
+                        <li class="nav-item active col-md-3" style="display:{{{onGuest}}}">
+                            <a class="nav-link h5" href="/users/login">Login</a>
+                        </li>
+                        <li class="nav-item active col-md-3" style="display:{{{onGuest}}}">
+                            <a class="nav-link h5" href="/users/register">Register</a>
+                        </li>
+                        <li class="nav-item active col-md-3" style="display:{{{onUser}}}">
+                            <a class="nav-link h5 text-nowrap" href="/users/profile">Profile</a>
+                        </li>
+                        <li class="nav-item active col-md-3" style="display:{{{onUser}}}">
+                            <a class="nav-link h5 text-nowrap" href="/tubes/upload">Upload</a>
+                        </li>
+                        <li class="nav-item active col-md-3" style="display:{{{onUser}}}">
+                            <a class="nav-link h5" href="/users/logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{{content}}}
+    </main>
+
+    <footer class="footer py-3">
+        <div class="container-fluid">
+            <div class="text-center">
+                &copy; CopyRight Sanity Web Design Studios 2018. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

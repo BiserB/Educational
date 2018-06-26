@@ -1,0 +1,33 @@
+﻿<hr class="my-2" />
+<div class="text-center mb-3">
+    <h1>Upload</h1>
+</div>
+<hr class="my-2" />
+
+<form  class="text-center" role="form" action="/tubes/upload" method="POST">
+    <div class="container">
+        <div class="col-md-4 offset-md-4">
+            <label class="control-label h3 mb-2" for="title">Title</label>
+            <div class="controls">
+                <input type="text" id="title" name="Title" placeholder="" class="input-xlarge">
+            </div><br />
+            <label class="control-label h3 mb-2" for="author">Author</label>
+            <div class="controls">
+                <input type="text" id="author" name="Author" class="input-xlarge">
+            </div><br />
+            <label class="control-label h3 mb-2" for="youTubeId">YouTube Link</label>
+            <div class="controls">
+                <input type="text" id="youTubeId" name="YouTubeId" minlength="11" maxlength="11" class="input-xlarge">
+            </div><br />
+        </div>
+
+            <label class="control-label h3 mb-2 col-md-6" for="description">Description</label>
+            <div>
+                <textarea class="col-md-8" id="description" rows="3" name="Description"></textarea>
+            </div><br />
+
+        <div class="col-md-4 offset-md-4">
+            <button type="submit" class="btn btn-info">Upload</button>
+        </div><br />
+    </div>
+</form>

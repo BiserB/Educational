@@ -1,0 +1,25 @@
+.bg-color-dark {
+	background-color: #483D8B;
+	color: #A9A9A9;
+}
+
+main {
+    padding-bottom: 60px;
+}
+
+.footer {
+    background-color: #483D8B;
+    color: #A9A9A9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.nav-item>a:hover, .navbar-brand:hover {
+	color: #FFFFFF;
+}
+
+iframe {
+	overflow:hidden;
+}
