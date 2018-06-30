@@ -1,0 +1,42 @@
+﻿<hr class="my-2">
+<span class="alert-danger col-sm-4 col-lg-6 text-center" style="padding:0;">{{{message}}}</span>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="form-holder text-center">
+            <form class="form-inline" action="/kittens/add" method="post">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="name">Name</label>
+                        <div class="controls">
+                            <input type="text" id="name" name="Name" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="control-group">
+                        <label class="control-label" for="birthdate">Birthdate</label>
+                        <div class="controls">
+                            <input type="date" id="birthdate" name="Birthdate" min="2000-01-01" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="breed">Breed</label><br />
+                        <select id="breed" name="BreedType">
+                            <option class="form-control" value="Street Transcended">Street Transcended</option>
+                            <option class="form-control" value="American Shorthair">American Shorthair</option>
+                            <option class="form-control" value="Munchkin">Munchkin</option>
+                            <option class="form-control" value="Siamese">Siamese</option>
+                        </select>
+                    </div>
+                    <br />                    
+                    <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-success">Add</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<hr class="my-5" />

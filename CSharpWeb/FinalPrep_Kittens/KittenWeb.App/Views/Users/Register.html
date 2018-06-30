@@ -1,0 +1,46 @@
+﻿<hr class="my-2">
+<span class="alert-danger col-sm-4 col-lg-6 text-center" style="padding:0;">{{{message}}}</span>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="form-holder text-center">
+            <form class="form-inline" action="/users/register" method="post">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="username">Username</label>
+                        <div class="controls">
+                            <input type="text" id="username" name="Username" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="control-group">
+                        <label class="control-label" for="email">E-mail</label>
+                        <div class="controls">
+                            <input type="email" id="email" name="Email" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password</label>
+                        <div class="controls">
+                            <input type="password" id="password" name="Password" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="control-group">
+                        <label class="control-label" for="confirmPassword">Confirm Password</label>
+                        <div class="controls">
+                            <input type="password" id="confirmPassword" name="ConfirmPassword" class="input-xlarge">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-success">Register</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<hr class="my-5" />
