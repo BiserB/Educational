@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FDMC</title>
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img src="~/images/FDMC_Logo2.svg" alt="Logo" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".topNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="topNav collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="btn"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="btn text-nowrap"><a asp-controller="Cat" asp-action="Add">Add cat</a></li>
+                </ul>
+            </div>
+            <h3>Fluffy Duffy Munchkin Cats</h3>
+            <div class="topNav collapse navbar-collapse">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="btn"><a asp-controller="Home" asp-action="About">About</a></li>
+                    <li class="btn"><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - FDMC</p>
+        </footer>
+    </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

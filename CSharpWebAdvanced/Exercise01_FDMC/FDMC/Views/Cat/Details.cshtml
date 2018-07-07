@@ -1,0 +1,24 @@
+﻿@using FDMC.Models.ViewModels
+
+@model CatView
+
+<span class="alert-danger col-sm-4 col-lg-6 text-center" style="padding:0;">@ViewData["Message"]</span>
+
+@{
+    if (Model != null)
+    {
+        <h1>@Model.Name</h1>
+
+        <div>
+            <img src="@Model.ImageUrl" alt="Cat Image" />
+        </div>
+
+        <p>
+            Age: @Model.Age
+        </p>
+        <p>
+            Breed: @Model.Breed
+        </p>
+    }
+}
+

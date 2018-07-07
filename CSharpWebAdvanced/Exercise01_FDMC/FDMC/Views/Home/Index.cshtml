@@ -1,0 +1,22 @@
+﻿@using FDMC.Models.ViewModels
+@model List<CatView>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{     
+    foreach (var view in Model)
+    {
+        <div class="d-inline-block">
+            <div class="card border-0" style="width: 18rem; margin:10px;">
+                <img class="img-thumbnail" style="height:200px" src="@view.ImageUrl" alt="Cat image">
+                <div class="card-body text-center">
+                    <span class="card-text">Name: @view.Name</span><br />
+                    <span class="card-text">Age: @view.Age</span><br />
+                    <span class="card-text">Breed: @view.Breed</span><br />
+                </div>
+            </div>
+        </div>
+    }
+}

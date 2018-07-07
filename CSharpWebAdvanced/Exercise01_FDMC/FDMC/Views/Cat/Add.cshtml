@@ -1,0 +1,34 @@
+﻿<h1 class="text-center">Add Cat</h1>
+<span class="alert-danger col-sm-4 col-lg-6 text-center" style="padding:0;">@ViewData["Message"]</span>
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <form class="col-sm-4 col-lg-6" action="/cat/add" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control form-control-lg" id="name" name="Name">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control form-control-lg" id="age" min="0" max="40" name="Age" value="0">
+                <small class="form-text text-muted">Age in years</small>
+            </div>
+            <div class="form-group">
+                <label for="name">Image Url</label>
+                <input type="text" class="form-control form-control-lg" id="ImageUrl" name="ImageUrl">
+            </div>
+            <div class="form-group">
+                <label for="breed">Breed</label><br />
+                <select id="breed" name="Breed">
+                    <option class="form-control" value="Street_Transcended">Street Transcended</option>
+                    <option class="form-control" value="American_Shorthair">American Shorthair</option>
+                    <option class="form-control" value="Munchkin">Munchkin</option>
+                    <option class="form-control" value="Siamese">Siamese</option>
+                </select>
+            </div>
+            <br />
+            <div class="row">
+                <input class="button btn-lg btn-info ml-auto" type="submit" value="Add Cat" />
+            </div>
+        </form>
+    </div>
+</div>
