@@ -1,0 +1,24 @@
+﻿@using BookLibrary.ViewModels
+
+@model AuthorDetailsViewModel
+
+@{
+    ViewData["Title"] = "Author Details";
+}
+
+<span class="h2 alert-danger text-center" style="padding:0;">@ViewData["Message"]</span>
+
+@{ 
+    if (Model != null)
+    {
+        <h1 class="h3">@Model.Name</h1>
+
+        <ul>
+            @foreach (var book in Model.Books)
+            {
+                <li><a href="/books/details/@book.Item1">@book.Item2</a> (@book.Item3)</li>
+            }
+        </ul>
+        
+    }
+}

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]-BookLibrary</title>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/home.css" rel="stylesheet" />
+</head>
+<body>
+    <wrapper class="d-flex flex-column">
+        <header>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container">
+                    <div>
+                        <a class="navbar-brand text-nowrap text-white" href="/home/index">Our Library</a>
+                        <a class="text-nowrap text-white" href="/books/add">Add Book</a>
+                    </div>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+
+            @RenderBody()
+            
+        </main>
+        <partial name="_CookieConsentPartial" />
+        <footer class="container">
+            <nav class="navbar navbar-expand flex-md-row flex-column" id="bottom-nav">
+                <ul class="navbar-nav mr-md-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" href="#topNav">Back to top</a>
+                    </li>
+                </ul>
+                <div class="ml-md-auto">
+                    <span>Copyright &copy; 2018 by <a class="bright" href="/home/index">Vote.Inc</a> |</span>
+                    <span>Coded by <a class="bright" href="#">B.B.</a></span>
+                </div>
+            </nav>
+        </footer>
+    </wrapper>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

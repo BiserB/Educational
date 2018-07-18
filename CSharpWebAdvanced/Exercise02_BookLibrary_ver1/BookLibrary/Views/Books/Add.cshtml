@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Add Book";
+}
+
+<div class="login-form">
+    <form action="/books/add" method="post">
+        <h2 class="text-center">Add Book</h2>
+        <div class="form-group">
+            <input type="text" class="form-control" name="Title" placeholder="Title" required="required">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="AuthorName" placeholder="Author Name" required="required">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="CategoryName" placeholder="Category Name" required="required">
+        </div>
+        <div class="form-group">
+            <input type="url" class="form-control" name="CoverImageUrl" placeholder="Cover Image Url" required="required">
+        </div>
+        <div class="form-group">
+            <textarea rows="3" class="form-control" name="Description" placeholder="Description"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Add</button>
+        </div>
+    </form>
+</div>

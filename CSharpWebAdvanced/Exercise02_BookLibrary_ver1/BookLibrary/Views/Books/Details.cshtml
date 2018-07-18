@@ -1,0 +1,33 @@
+﻿@using BookLibrary.ViewModels
+
+@model BookDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<span class="h2 alert-danger text-center" style="padding:0;">@ViewData["Message"]</span>
+
+@{
+    if (Model != null)
+    {   
+        <div class=" d-inline-block">
+            <img src="@Model.CoverImageUrl" alt="Book Cover Image" />
+        </div>
+        <div class="col-lg-6 d-inline-block">
+            <h1 class="h3"><strong>@Model.Title</strong></h1>
+            <h4>
+                by: @Model.Author
+            </h4>
+            <p>
+                @Model.Description
+            </p>
+            <p>
+                <strong>Status: </strong>@Model.Status
+            </p>
+            <p>
+                <strong>Category: </strong>@Model.Category
+            </p>
+        </div>
+    }
+}

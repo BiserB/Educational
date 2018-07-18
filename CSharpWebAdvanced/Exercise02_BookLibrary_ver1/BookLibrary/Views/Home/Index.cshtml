@@ -1,0 +1,32 @@
+﻿@using BookLibrary.ViewModels
+@model List<BookViewModel>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int num = 0;
+            foreach (var book in Model)
+            {
+                num += 1;
+                <tr>
+                    <th scope="row">@num</th>
+                    <td><a href="/books/details/@book.Id">@book.Title</a></td>
+                    <td><a href="/authors/details/@book.AuthorId">@book.Author</a></td>
+                    <td>@book.Status</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table >
