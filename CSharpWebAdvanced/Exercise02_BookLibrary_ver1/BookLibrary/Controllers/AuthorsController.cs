@@ -28,7 +28,7 @@ namespace BookLibrary.Controllers
                 return View();
             }
 
-            var booksInfo = new List<(string, string, string)>();
+            var booksInfo = new List<(int, string, string)>();
 
             var authorBooks = DbContext.Books.Where(b => b.AuthorId == author.Id).ToList();
 
