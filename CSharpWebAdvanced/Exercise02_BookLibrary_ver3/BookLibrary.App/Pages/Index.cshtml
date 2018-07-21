@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<h1 class="h3 m-2">Our Library</h1>
+<a asp-page="/Books/Add" class="btn btn-success m-2">Add new book</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int num = 0;
+            foreach (var book in Model.Books)
+            {
+                num += 1;
+                <tr>
+                    <th scope="row">@num</th>
+                    <td><a asp-page="/Books/Details" asp-route-id="@book.Id">@book.Title</a></td>
+                    <td><a asp-page="/Authors/Details" asp-route-id="@book.AuthorId">@book.Author</a></td>
+                    <td>@book.Status</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

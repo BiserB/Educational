@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]-BookLibrary</title>
+
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    @*<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />*@
+    <link href="~/css/home.css" rel="stylesheet" />
+    <link href="~/css/all.css" rel="stylesheet" />
+
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/all.js"></script>
+</head>
+
+<body>
+    <wrapper class="d-flex flex-column">
+        <partial name="_CookieConsentPartial" />
+        <header class="navbar navbar-expand navbar-dark bg-dark flex-md-row flex-column">
+            <div class="navbar-brand  offset-md-1">
+                <a asp-page="/Index" class="text-nowrap text-white">Our Library</a>
+            </div>
+                <div class="navbar-nav bd-navbar-nav">
+                    <a asp-page="/Books/Add" class="btn bg-secondary text-white m-1">Add Book</a>
+                    <a asp-page="/Borrowers/Add" class="btn bg-secondary text-white m-1">Add Borrower</a>
+                    <a asp-page="/Loans/Add" class="btn bg-secondary text-white m-1">Add Loan</a>
+                </div>
+            <form asp-page="/Search" class="input-group col-md-3 ml-auto" method="get">
+                <input class="form-control py-2" type="search" name="searchTerm" placeholder="Search books and authors">
+                <span class="input-group-append">
+                    <button class="btn btn-light border-left" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </form>
+        </header>
+
+        <main class="container">
+
+            @RenderBody()
+        </main>
+
+        <footer class="container">
+            <nav class="navbar navbar-expand flex-md-row flex-column" id="bottom-nav">
+                <ul class="navbar-nav mr-md-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" href="#topNav">Back to top</a>
+                    </li>
+                </ul>
+                <div class="ml-md-auto">
+                    <span>Copyright &copy; 2018 by <a asp-page="/Index" class="bright">Our Library</a> |</span>
+                    <span>Coded by <a class="bright" href="#">B.B.</a></span>
+                </div>
+            </nav>
+        </footer>
+    </wrapper>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

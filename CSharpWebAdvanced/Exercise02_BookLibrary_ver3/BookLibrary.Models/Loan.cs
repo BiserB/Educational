@@ -1,0 +1,26 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace BookLibrary.Models
+{
+    public class Loan
+    {
+        public int Id { get; set; }
+
+        public int BorrowerId { get; set; }
+
+        [Required]
+        public Borrower Borrower { get; set; }
+
+        public int BookId { get; set; }
+
+        [Required]
+        public Book Book { get; set; }
+
+        public DateTime DateOfLoan { get; set; }
+
+        public DateTime DueDate { get; set; }
+
+        public bool IsReturned { get; set; }
+    }
+}

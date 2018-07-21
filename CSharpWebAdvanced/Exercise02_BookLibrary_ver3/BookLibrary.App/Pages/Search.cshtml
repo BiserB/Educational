@@ -1,0 +1,18 @@
+﻿@page
+@model BookLibrary.App.Pages.SearchModel
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h2>Search results: "@Model.SearchTerm"</h2>
+
+<ul>
+    @{
+        foreach (var result in Model.Results)
+        {
+            string targetPage = result.Type == "book" ? "/Books/Details" : "/Author/Details";
+
+            <li><a asp-page="@targetPage" asp-route-id="@result.Id">@Html.Raw(result.Name)</a> (@result.Type)</li>
+        }
+    }
+</ul>

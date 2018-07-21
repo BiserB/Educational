@@ -1,0 +1,16 @@
+﻿@page
+@model BookLibrary.App.Pages.Authors.DetailsModel
+@{
+    ViewData["Title"] = "Author Details";
+}
+
+<h1 class="h3">@Model.AuthorName</h1>
+
+<ul>
+    @{
+        foreach (var book in Model.Books)
+        {
+            <li><a asp-page="/Books/Details" asp-route-id="@book.Id">@book.Title</a> (@book.Status)</li>
+        }
+    }
+</ul>
