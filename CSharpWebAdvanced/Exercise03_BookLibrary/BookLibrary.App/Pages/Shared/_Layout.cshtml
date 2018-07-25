@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]-BookLibrary</title>
+
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    @*<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />*@
+    <link href="~/css/home.css" rel="stylesheet" />
+    <link href="~/css/all.css" rel="stylesheet" />
+
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/all.js"></script>
+</head>
+
+<body>
+    <wrapper class="d-flex flex-column">
+
+        <partial name="_CookieConsentPartial" />
+        <header id="top-nav">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-md-row flex-column">
+
+                <a asp-page="/Index" class="navbar-brand offset-md-1">Our Library</a>
+                
+                <div class="navbar-nav bd-navbar-nav flex-row">
+                    <div class="nav-item dropdown m-1">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
+                            Books/Movies
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a asp-page="/Books/Add" class="dropdown-item">Add Book</a>
+                            <a asp-page="/Books/List" class="dropdown-item">Books List</a>
+                            <div class="dropdown-divider"></div>
+                            <a asp-page="/Movies/Add" class="dropdown-item">Add Movie</a>
+                            <a asp-page="/Movies/List" class="dropdown-item">Movies List</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown m-1">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
+                            Borrowers
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a asp-page="/Borrowers/Add" class="dropdown-item">Add Borrower</a>
+                            <a asp-page="/Borrowers/List" class="dropdown-item">Borrowers List</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown m-1">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
+                            Loans
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a asp-page="/Loans/Add" class="dropdown-item">Add Loan</a>
+                            <a asp-page="/Loans/List" asp-route-option="active" class="dropdown-item">Active Loans</a>
+                            <a asp-page="/Loans/List" asp-route-option="returned" class="dropdown-item">Returned Loans</a>
+                            <a asp-page="/Loans/List" asp-route-option="all" class="dropdown-item">All Loans</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form asp-page="/Search" method="get" class="input-group col-md-3 ml-auto">
+                    <input class="form-control" type="search" name="searchTerm" placeholder="Search books and authors" aria-label="Search">
+                    <span class="input-group-append">
+                        <button class="btn btn-light" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </form>
+            </nav>
+        </header>       
+
+        <main class="container">
+
+            @RenderBody()
+        </main>
+
+        <footer class="container">
+            <nav class="navbar navbar-expand flex-md-row flex-column" id="bottom-nav">
+                <ul class="navbar-nav mr-md-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" href="#top-nav">Back to top</a>
+                    </li>
+                </ul>
+                <div class="ml-md-auto">
+                    <span>Copyright &copy; 2018 by <a asp-page="/Index" class="bright">Our Library</a> |</span>
+                    <span>Coded by <a class="bright" href="#">B.B.</a></span>
+                </div>
+            </nav>
+        </footer>
+    </wrapper>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

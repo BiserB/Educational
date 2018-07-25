@@ -1,0 +1,42 @@
+﻿@page "{id}"
+@model BookLibrary.App.Pages.Borrowers.DetailsModel
+@using BookLibrary.App.Auxiliary
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="text-center m-2">Details for <strong>@Model.Borrower.Name</strong></h2>
+
+<p><strong class="h5">Address: @Model.Borrower.Address</strong></p>
+<p><strong class="h5">Total Count of loans: @Model.Borrower.CountOfLoans</strong></p>
+@{string alertType = Model.CountOfOverdue == 0 ? "alert-info": "alert-danger"; }
+<p><strong class="alert @alertType">Count of overdue loans: @Model.CountOfOverdue</strong></p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Date of Loan</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int num = 0;
+            foreach (var loan in Model.Loans)
+            {
+                num += 1;
+                <tr>
+                    <th scope="row">@num</th>
+                    <td><a asp-page="/Books/Details" asp-route-id="@loan.BookId">@loan.BookTitle</a></td>
+                    <td>@loan.DateOfLoan</td>
+                    <td>@loan.DueDate</td>
+                    <td>@Html.IsReturned(loan.IsReturned, loan.Id)</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

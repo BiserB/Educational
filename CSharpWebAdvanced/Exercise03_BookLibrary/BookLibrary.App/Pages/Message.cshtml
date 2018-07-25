@@ -1,0 +1,18 @@
+﻿@page 
+@model BookLibrary.App.Pages.Shared.MessageModel
+@{
+    ViewData["Title"] = "Message";
+}
+
+<div class="message-box text-center">
+    <div class="form-group"> 
+        <br />
+        <h3>
+            <strong>@Model.Message</strong>
+        </h3>        
+    </div>
+    <div class="text-center">
+        <br />
+        <a asp-page="/Loans/List" asp-route-option="all" class="btn btn-success">OK</a>
+    </div>
+</div>

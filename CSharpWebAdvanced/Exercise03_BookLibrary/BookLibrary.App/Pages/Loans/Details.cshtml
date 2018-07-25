@@ -1,0 +1,28 @@
+﻿@page "{id}"
+@model BookLibrary.App.Pages.Loans.DetailsModel
+@{
+    ViewData["Title"] = "Loan Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Book</th>
+            <th scope="col">Borrower</th>
+            <th scope="col">Status</th>
+            <th scope="col">Return</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a asp-page="/Books/Details" asp-route-id="@Model.Loan.BookId">@Model.Loan.BookTitle</a></td>
+            <td><a asp-page="/Borrower/Details" asp-route-id="@Model.Loan.BorrowerId">@Model.Loan.BorrowerName</a></td>
+            <td>@Model.Loan.Status</td>
+            <td><form method="post" asp-page="/Loans/Details" asp-route-id="@Model.Loan.Id"><button>Return</button></form></td>
+        </tr>
+            
+    </tbody>
+</table>
+
