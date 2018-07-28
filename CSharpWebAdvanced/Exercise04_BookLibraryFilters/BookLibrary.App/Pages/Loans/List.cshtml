@@ -1,0 +1,41 @@
+﻿@page "{option?}"
+@model BookLibrary.App.Pages.Loans.ListModel
+@{
+    ViewData["Title"] = "Loans List";
+}
+
+<h2 class="text-center m-2">List of @Model.Option loans: <span class="alert alert-info m-0 p-0">@Model.LoanList.Count</span></h2>
+<br />
+<a asp-page="/Loans/Add" class="btn bg-secondary text-white m-1">Add Loan</a>
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Item</th>
+            <th scope="col">Borrower</th>
+            <th scope="col">Date of Loan</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Returned</th>
+            <th scope="col">Overdue</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var loan in Model.LoanList)
+            {
+
+             <tr>
+                 <td>@loan.Type</td>
+                 <td><a href="/@(loan.Type)s/Details?id=@(loan.ItemId)">@loan.ItemTitle</a></td>
+                 <td><a asp-page="/Borrowers/Details" asp-route-id="@loan.BorrowerId">@loan.BorrowerName</a></td>
+                 <td>@loan.DateOfLoan</td>
+                 <td>@loan.DueDate</td>
+                 <td>@Html.IsReturned(loan.IsReturned, loan.Id, loan.Type)</td>
+                 <td>@Html.IsOverdue(loan.Status)</td>
+             </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+﻿@model List<MovieShortInfoModel>
+@{
+    ViewData["Title"] = "Movie List";
+}
+
+<h2 class="text-center font-weight-bold">List of all movies</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Director</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int num = 0;
+            foreach (var movie in Model)
+            {
+                num += 1;
+                <tr>
+                    <th scope="row">@num</th>
+                    <td><a asp-controller="Movies" asp-action="Details" asp-route-id="@movie.Id">@movie.Title</a></td>
+                    <td><a asp-controller="Directors" asp-action="Details" asp-route-id="@movie.DirectorId">@movie.DirectorName</a></td>
+                    <td>@movie.Status</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

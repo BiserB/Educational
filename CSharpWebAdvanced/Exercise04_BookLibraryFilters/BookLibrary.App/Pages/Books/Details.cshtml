@@ -1,0 +1,41 @@
+﻿@page
+@model BookLibrary.App.Pages.Books.DetailsModel
+@{
+    ViewData["Title"] = "Book Details";
+}
+<h2 class="text-center">Details</h2>
+@{
+    if (Model != null)
+    {
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="@Model.CoverImageUrl" alt="Book Cover Image" class="img-fluid" />
+            </div>
+            <div class="col-sm-8">
+                <h1 class="h3"><strong>@Model.Title</strong></h1>
+                <h4>
+                    by: @Model.AuthorName
+                </h4>
+                <p>
+                    @Model.Description
+                </p>
+                <p>
+                    <strong>Status: </strong>@Model.Status
+                </p>
+                @{
+                    if (Model.StatusId == 1)
+                    {
+                        <form method="get" asp-page="/Loans/Add" asp-page-handler="FromBook" asp-route-id="@Model.Id">
+                            <button class="btn btn-success">Borrow</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <strong class="text-danger">The book is borrowed</strong>
+                    }
+                }
+            </div>
+        </div>
+
+    }
+}

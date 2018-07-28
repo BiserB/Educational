@@ -1,0 +1,33 @@
+﻿@model MovieDetailsModel
+@{
+    ViewData["Title"] = "Movie details";
+}
+
+<h2 class="text-center m-2">@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="@Model.CoverImageUrl" alt="Movie Cover Image" class="img-fluid" />
+    </div>
+    <div class="col-sm-8">
+        <h1 class="h3"><strong>@Model.Title</strong></h1>
+        <h4>
+            by: @Model.DirectorName
+        </h4>
+        <p>
+            @Model.Description
+        </p>
+        @{
+            if (Model.Status == "At home")
+            {
+                <form method="get" asp-controller="MovieLoans" asp-action="Add" asp-route-id="@Model.Id">
+                    <button class="btn btn-success">Borrow</button>
+                </form>
+            }
+            else
+            {
+                <strong class="text-danger">The movie is borrowed</strong>
+            }
+        }
+    </div>
+</div>
