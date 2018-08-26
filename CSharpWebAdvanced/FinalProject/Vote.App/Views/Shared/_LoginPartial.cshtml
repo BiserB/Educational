@@ -1,0 +1,37 @@
+@using Microsoft.AspNetCore.Identity
+@using Vote.Models
+
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    char firstLetter = UserManager.GetUserName(User).ToUpper()[0];
+
+    <ul class="navbar-nav navbar-right">
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdown" data-toggle="dropdown">
+                <span id="avatar">@firstLetter</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdown" data-display="static" id="limited">
+                <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage" class="dropdown-item">Profile</a>
+                <div class="dropdown-divider alert-dark"></div>
+                <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm">
+                    <button type="submit" class="dropdown-item" title="Logout">Logout</button>
+                </form>
+            </div>
+        </li>
+    </ul>
+
+}
+else
+{
+    <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Login"><span class="h4">Login</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="Identity" asp-page="/Account/Register"><span class="h4">Register</span></a>
+        </li>
+    </ul>
+}

@@ -1,0 +1,15 @@
+﻿@using Vote.App.Areas.Participant.Models
+@model JoinEventViewModel
+@{
+    ViewData["Title"] = "Join";
+}
+
+<h2><strong>@Model.EventTitle</strong> @Model.EventCode </h2>
+
+<p>Questions: </p>
+@{
+    foreach (var question in Model.Questions)
+    {
+        <p>@question.</p>
+    }
+}

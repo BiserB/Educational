@@ -1,0 +1,45 @@
+﻿@model List<EventViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>LIST OF ALL EVENTS</h3>
+<br />
+<div class="text-right">
+    <a asp-area="Manager" asp-controller="Activities" asp-action="Create" class="btn btn-secondary">Create event</a>
+</div>
+<br />
+
+<div class="list-group">
+
+    @{
+        foreach (var item in Model)
+        {
+            <div class="list-group-item">
+                <div class="row">
+                    <span class="font-weight-bold">
+                        @item.Title
+                    </span>
+                    <span>
+                        @item.Code
+                    </span>
+                </div>
+                <div class="row bg-light">
+                    <span class="font-weight-light">
+                        @item.StartDate
+                    </span>
+                    <span class="font-weight-light">
+                        @item.EndDate
+                    </span>
+                    <span>
+                        @item.IsPrivate
+                    </span>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+
+
+<datalist typeof=" "></datalist>

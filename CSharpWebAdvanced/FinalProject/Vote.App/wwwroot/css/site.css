@@ -1,0 +1,160 @@
+﻿body, wrapper {
+    min-height: 100vh;
+    background-color: #3AAFA9;
+}
+
+main {
+    flex: 1;
+}
+
+.nav-link {
+    color: #DEF2F1;
+}
+
+.nav-link:hover {
+        color: #2B7A78;
+    }
+
+.btn-info {
+    margin-left: 5px;
+}
+
+.important {
+    font-family: Verdana;
+    font-size: 3.5em;
+    line-height: 4.2vw;
+    letter-spacing: 2px;
+    padding-bottom: 1vw;
+}
+
+.information {
+    font-family: Verdana;
+    font-size: 1.2em;
+}
+
+.bright {
+    color: #DEF2F1
+}
+
+/*--------Login---------*/
+
+.form-control {
+    min-height: 40px;
+    background: #e2e2e2;
+    box-shadow: none !important;
+    border: transparent;
+}
+
+    .form-control:focus {
+        background: #f2f2f2;
+    }
+
+.login-form .btn {
+    font-size: 16px;
+    font-weight: 900;
+    background: #2b7a78;
+    border: none;
+    outline: none !important;
+}
+
+.login-form .btn:hover, .login-form .btn:focus {
+    background: #3aafa9;
+}
+    
+/*--------show/hide---------*/
+
+#show {
+    margin-top: 2px;
+    padding: 0px 3px 1px 3px;
+    font-weight: normal !important;
+    color: #feffff;
+    background: lightgray !important;
+}
+
+/*-------- Avatar-----------*/
+
+#avatar {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    border-radius: 50%;
+    background: #def2f1;
+    vertical-align: middle;
+    margin-right: 1em;
+    color: black;
+}
+
+#limited {
+    background-color: #def2f1;
+    max-width:30px;
+}
+
+/*-------- Buttons-----------*/
+/*.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}*/
+
+    /*.btn:focus, .btn:active:focus, .btn.active:focus {
+        outline: 0 none;
+    }*/
+
+.btn-secondary {
+    background: #2b7a78;
+    color: #feffff;
+}
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+        background: #def2f1;
+        color: #17252a;
+    }
+
+    .btn-secondary:active,
+    .btn-secondary.active,
+    .open > .dropdown-toggle.btn-secondary {
+        background: #2b7a78;
+        color: #feffff;
+    }
+
+    /*-------------- Ask -------------*/
+
+.ask-form textarea.form-control {
+    padding-left: 0.9rem;
+}
+
+.ask-form {
+    background: #feffff;
+    box-shadow: 5px 5px 5px 5px #BBCCCA;
+    border: initial;
+}
+
+.ask-form textarea.form-control {
+    background: #feffff;
+}
+
+/*-------------- Question list -------------*/
+
+.questions {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100vh;
+    margin-left: 10px;
+}
+
+.content-mutted{
+    color:darkgray;
+    font-size:small
+}
+
+.code-mutted {
+    color: darkgray;
+    font-size: inherit;
+}

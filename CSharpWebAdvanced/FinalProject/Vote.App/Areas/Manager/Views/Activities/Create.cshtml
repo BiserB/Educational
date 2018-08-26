@@ -1,0 +1,51 @@
+﻿@model CreateEventBindingModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="row">
+    <div class="col-md-4 ml-auto  mr-auto">
+        <form asp-area="Manager" asp-controller="Activities" asp-action="Create" method="post">
+            <h4 class="text-center">Create a new event.</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-warning"></div>
+            <div class="form-group">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-warning"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Code"></label>
+                <input asp-for="Code" class="form-control" />
+                <span asp-validation-for="Code" class="text-warning"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsPrivate"></label>
+                <input asp-for="IsPrivate" class="form-control" />
+                <span asp-validation-for="IsPrivate" class="text-warning"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate"></label>
+                <input asp-for="StartDate" value="@DateTime.Today.ToString("dd/MM/yyyy")" class="datepicker form-control"/>
+                <span asp-validation-for="StartDate" class="text-warning"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate"></label>
+                <input asp-for="EndDate" value="@DateTime.Today.ToString("dd/MM/yyyy")" class="datepicker form-control">
+                <span asp-validation-for="EndDate" class="text-warning"></span>
+            </div>
+            <br />
+            <div class="row">
+                <button type="submit" class="btn btn-secondary ml-auto mr-auto">CREATE</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <partial name="_DatePicker" />    
+}
+

@@ -1,0 +1,64 @@
+﻿@model JoinEventViewModel
+@{
+    ViewData["Title"] = "Join";
+}
+
+<div class="row">
+
+    <div class="col-md-6 bg-light">
+
+        <h1 class="h4 ml-auto mr-auto mt-md-2"><strong>@Model.EventTitle</strong> <span class="code-mutted">@Model.EventCode</span></h1>
+        <span>Type your question</span>
+        <div class="container">
+            <form asp-area="participant" asp-controller="events" asp-action="ask" class="form" method="post">
+                <br />
+                <input asp-for="EventId" type="hidden">
+                <input asp-for="EventCode" type="hidden">
+                <input asp-for="ParticipantId" type="hidden">
+                <div class="ask-form border-info">
+                    <div class="form-group">
+                        <label asp-for="Content" class="sr-only"></label>
+                        <textarea asp-for="Content" class="form-control" maxlength="256" rows="3"></textarea>
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ParticipantName" class="sr-only"></label>
+                        <div class="container">
+                            <div class="row bg-info">
+                                <div class="col-8">
+                                    <input asp-for="ParticipantName" class="form-control" placeholder="Your name (optional)">
+                                </div>
+                                <div class="col-4 text-center">
+                                    <button type="submit" class="btn btn-secondary">Send</button>
+                                </div>
+                            </div>                                                      
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row bg-secondary">
+            <h4>@Model.Questions.Count questions: </h4>
+        </div>
+            <div class="row">
+                <div class="questions">
+                    @{
+                        foreach (var question in Model.Questions)
+                        {
+                            <div>
+                                @question.Content
+                            </div>
+                            <div>
+                                <span class="content-mutted">@question.PublishedOn.ToShortDateString()</span>
+                                <span class="ml-2">@question.AuthorName</span>
+                            </div>
+                            <hr />
+                        }
+                    }
+                </div>
+            </div>
+        
+    </div>
+</div>
