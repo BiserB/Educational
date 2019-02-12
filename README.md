@@ -6,8 +6,6 @@
 
 [C# Tech Module](/CSharpTechModule)
 
-[C# OOP](/CSharpOOP)
-
 [Databases Advanced - Entity Framework](/CSharpDB)
 
 [C# Advanced](/CSharpAdvanced)
@@ -20,7 +18,7 @@
 
 [C# Web Development Basics](/CSharpWeb)
 
-[C# MVC Frameworks - ASP.NET Core](/CSharpWeb)
+[C# MVC Frameworks - ASP.NET Core](/CSharpMVCFrameworks)
 
 
 
