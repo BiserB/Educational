@@ -1,0 +1,42 @@
+﻿@model CourseViewModel
+@{
+    ViewData["Title"] = "Course Details";
+}
+<br />
+<div class="row">
+    <div>
+        <a asp-area="Trainer" asp-controller="Courses" asp-action="Index">
+            <i class="fa fa-arrow-left m-2">All cources</i>
+        </a>
+    </div>
+    <div class="offset-md-2">
+        <h1 class="h3">Details for course <strong class="bg-dark text-white p-1">@Model.Name</strong></h1>
+    </div>
+</div>
+
+<br />
+<a asp-area="Trainer" asp-controller="Instances" asp-action="AddInstance" asp-route-id="@Model.Id" class="btn btn-main font-weight-bold m-2">ADD INSTANCE</a>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Instance</th>
+            <th>Trainer</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var instance in Model.Instances)
+            {
+                <tr>
+                    <td><a asp-area="Trainer" asp-controller="Instances" asp-action="EditInstance" asp-route-id="@instance.Id">@instance.Name</a></td>
+                    <td>@instance.Trainer</td>
+                    <td>@instance.StartDate.ToShortDateString()</td>
+                    <td>@instance.EndDate.ToShortDateString()</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

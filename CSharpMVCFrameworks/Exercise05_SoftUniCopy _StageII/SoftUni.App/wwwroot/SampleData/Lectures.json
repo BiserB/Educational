@@ -1,0 +1,30 @@
+[
+  {
+    "Title": "C# Fundamentals 2017 Intro",
+    "Description": "Introduction: C# Fundamentals",
+    "StartTime": "2017-05-23T18:00:00",
+    "EndTime": "2017-05-23T22:00:00",
+    "InstanceId": 5
+  },
+  {
+    "Title": "STACKS AND QUEUES",
+    "Description": "STACKS AND QUEUES ",
+    "StartTime": "2017-05-23T18:00:00",
+    "EndTime": "2017-05-23T22:00:00",
+    "InstanceId": 5
+  },
+  {
+    "Title": "EXERCISE: STACKS & QUEUES",
+    "Description": "Desc: EXERCISE: STACKS & QUEUES",
+    "StartTime": "2017-05-23T18:00:00",
+    "EndTime": "2017-05-23T22:00:00",
+    "InstanceId": 5
+  },
+  {
+    "Title": "Java Fundamentals Intro",
+    "Description": "Introduction to course Java Fundamentals",
+    "StartTime": "2017-01-20T18:00:00",
+    "EndTime": "2017-01-20T22:00:00",
+    "InstanceId": 10
+  }
+]

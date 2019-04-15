@@ -1,0 +1,34 @@
+[
+  {
+    "UserName": "pesho",
+    "FullName": "Pesho Peshev",
+    "Email": "pesho@mail.bg",
+    "EmailConfirmed": true,
+    "PhoneNumber": "0987655555",
+    "PhoneNumberConfirmed": true
+  },
+  {
+    "UserName": "student1",
+    "FullName": "Student One",
+    "Email": "student1@mail.bg",
+    "EmailConfirmed": true,
+    "PhoneNumber": "0987654321",
+    "PhoneNumberConfirmed": true
+  },
+  {
+    "UserName": "student2",
+    "FullName": "Student Two",
+    "Email": "student2@mail.bg",
+    "EmailConfirmed": true,
+    "PhoneNumber": "0987234567",
+    "PhoneNumberConfirmed": true
+  },
+  {
+    "UserName": "student3",
+    "FullName": "Student Tree",
+    "Email": "student3@mail.bg",
+    "EmailConfirmed": true,
+    "PhoneNumber": "0987234566",
+    "PhoneNumberConfirmed": true
+  }
+]

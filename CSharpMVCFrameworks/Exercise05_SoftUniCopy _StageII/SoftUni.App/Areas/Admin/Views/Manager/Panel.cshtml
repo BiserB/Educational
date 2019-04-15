@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Panel";
+}
+
+<h2 class="text-center">Panel</h2>
+<br />
+<div class="col-sm-6">
+    <div class="card text-dark bg-light">
+        <div class="card-header bg-dark text-center text-light"><h4>List of users</h4></div>
+        <div class="card-body ">
+            <div class="list-group">
+                <a  asp-area="Admin" asp-controller="Users" asp-action="UsersList" asp-route-role="@RoleType.Student" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-primary">
+                    List of STUDENTS
+                    <span class="badge badge-primary badge-pill">@ViewData["Students"]</span>
+                </a>
+
+                <a asp-area="Admin" asp-controller="Users" asp-action="UsersList" asp-route-role="@RoleType.Trainer" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-danger">
+                    List of TRAINERS
+                    <span class="badge badge-primary badge-pill">@ViewData["Trainers"]</span>
+                </a>
+
+                <a asp-area="Admin" asp-controller="Users" asp-action="UsersList" asp-route-role="@RoleType.Admin" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-success">
+                    List of ADMINISTRATORS
+                    <span class="badge badge-primary badge-pill">@ViewData["Admins"]</span>
+                </a>
+
+                <a asp-area="Admin" asp-controller="Users" asp-action="UsersList" asp-route-role="all" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-light ">
+                    List of all users
+                    <span class="badge badge-primary badge-pill">@ViewData["All"]</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<a class="btn btn-primary" asp-area="Trainer" asp-controller="Courses" asp-action="Index">TRAINER PANEL</a>

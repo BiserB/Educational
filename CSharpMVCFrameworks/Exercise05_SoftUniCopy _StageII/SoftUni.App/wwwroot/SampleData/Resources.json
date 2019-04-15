@@ -1,0 +1,98 @@
+[
+  {
+    "ResourceTypeId": 1,
+    "Title": "Presentation",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/officedocument/20441/presentation-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 3,
+    "Title": "Lab-Description",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/officedocument/20442/lab-problem-descriptions-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 3,
+    "Title": "Exercise-Description",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/officedocument/20443/exercise-problem-descriptions-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 2,
+    "Title": "Video",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/video/20468/video-stream-record-22-january-2018-yavor-valchev-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 2,
+    "Title": "Video",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/video/20498/video-stream-record-23-january-2018-bozhidar-danchev-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 2,
+    "Title": "Video",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/video/20538/video-stream-record-25-january-2018-yavor-valchev-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 2,
+    "Title": "Video",
+    "ResourceUrl": "https://youtu.be/InlX6PWCrps",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 2,
+    "Title": "Video",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/video/20610/video-stream-record-29-january-2018-yavor-valchev-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 2,
+    "Title": "Video",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/video/20659/video-stream-record-30-january-2018-bojidar-danchev-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 3,
+    "Title": "EXERCISE: STREAMS ",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/video/20659/video-stream-record-30-january-2018-bojidar-danchev-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 4,
+    "Title": "Resources for EXERCISE: STREAMS ",
+    "ResourceUrl": "https://softuni.bg/downloads/svn/csharp-fundamentals/2018-Jan/CSharp-Advanced/03.%20Streams/03.%20Streams-Exercise.zip",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 4,
+    "Title": "EXAM PREPARATION",
+    "ResourceUrl": "https://softuni.bg/downloads/svn/csharp-fundamentals/2018-Jan/CSharp-Advanced/Exam-Preparation/Exam_Preparation_20180208.zip",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 2,
+    "Title": "Video EXAM PREPARATION",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/video/20923/video-stream-record-08-february-2018-bojidar-danchev-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 2,
+    "Title": "Video EXAM PREPARATION ",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/video/20846/video-stream-record-05-february-2018-yavor-valchev-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 2,
+    "Title": "Video EXERCISE: FUNCTIONAL PROGRAMMING ",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/video/20779/video-stream-record-02-february-2018-bojidar-danchev-csharp-advanced-january-2018",
+    "LectureId": 1
+  },
+  {
+    "ResourceTypeId": 3,
+    "Title": "Problem FUNCTIONAL PROGRAMMING ",
+    "ResourceUrl": "https://softuni.bg/trainings/resources/officedocument/20686/exercise-problem-descriptions-csharp-advanced-january-2018",
+    "LectureId": 1
+  }
+]

@@ -1,0 +1,27 @@
+﻿@model AddCourseBindingModel
+@{
+    ViewData["Title"] = "Add Course";
+}
+
+<div class="col-lg-12">
+    <h1 class="h2 m-2">Add Course</h1>
+</div>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+                <form asp-area="Trainer" asp-controller="Courses" asp-action="AddCourse" method="post">
+                    <h4>Create a new course.</h4>
+                    <hr />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" />
+                    </div>
+
+                    <button type="submit" class="btn btn-default">Create</button>
+                </form>
+        </div>
+    </div>
+</div>

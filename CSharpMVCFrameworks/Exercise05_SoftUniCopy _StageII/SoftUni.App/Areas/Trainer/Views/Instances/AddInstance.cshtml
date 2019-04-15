@@ -1,0 +1,58 @@
+﻿@model InstanceBindingModel
+@{
+    ViewData["Title"] = "Add Instance";
+}
+
+<div class="row m-2">
+    <div>
+        <a asp-area="Trainer" asp-controller="Courses" asp-action="Details" asp-route-id="@Model.CourseId">
+            <i class="fa fa-arrow-left m-2">Back to the course</i>
+        </a>
+    </div>
+</div>
+
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card text-dark bg-light">
+                <div class="card-header bg-dark text-center text-light"><h4>Create a new instance.</h4></div>
+                <div class="col-sm-10 ml-auto mr-auto">
+                    <form asp-area="Trainer" asp-controller="Instances" asp-action="AddInstance" method="post">
+                        <hr />
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        @Html.FormGroupFor(model => model.Name)
+                        @Html.FormGroupFor(model => model.Description)
+
+                        <div class="form-group">
+                            <label asp-for="StartDate"></label>
+                            <input class="datepicker form-control">
+                            <span asp-validation-for="StartDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="EndDate"></label>
+                            <input class="datepicker form-control">
+                            <span asp-validation-for="EndDate" class="text-danger"></span>
+                        </div>
+
+                        @Html.DropDownListFor(m => m.TrainerId, Model.AllTrainers, "-- select trainer --", new { @class = "form-control" })
+                        <br />
+
+                        <input asp-for="CourseId" type="hidden" class="form-control" />
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary font-weight-bold m-2 ml-auto">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_DatePicker");
+    }
+}

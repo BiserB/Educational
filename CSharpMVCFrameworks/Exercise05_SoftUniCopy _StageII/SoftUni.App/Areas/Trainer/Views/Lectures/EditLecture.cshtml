@@ -1,0 +1,77 @@
+﻿@model EditLectureBindingModel
+@{
+    ViewData["Title"] = "Edit Lecture";
+}
+
+<div class="row m-2">
+    <div>
+        <a asp-area="Trainer" asp-controller="Instances" asp-action="EditInstance" asp-route-id="@Model.Lecture.InstanceId">
+            <i class="fa fa-arrow-left m-2">Back to the instance</i>
+        </a>
+    </div>
+</div>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card text-dark bg-light">
+                <div class="card-header bg-dark text-center text-light">
+                    <h4>
+                        Edit the lecture.
+                    </h4>
+                </div>
+                <div class="col-sm-10 ml-auto mr-auto">
+                    <form asp-area="Trainer" asp-controller="Lectures" asp-action="EditLecture" method="post">
+                        <hr />
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        @Html.FormGroupFor(model => model.Lecture.Title)
+                        @Html.FormGroupFor(model => model.Lecture.Description)
+                        @Html.FormGroupFor(model => model.Lecture.LectureHall)
+                        @Html.DisplayFor(model => model.Lecture.StartTime)
+                        @Html.EditorFor(model => model.Lecture.EndTime)
+                        <br />
+                        <br />
+                        <input asp-for="Lecture.InstanceId" type="hidden" class="form-control" />
+                        <input asp-for="Lecture.LectureId" type="hidden" class="form-control" />
+                        <div class="row">
+                            <div class="mr-auto">
+                                <a asp-area="Trainer" asp-controller="Lectures" asp-action="DeleteLecture" asp-route-id="@Model.Lecture.LectureId" asp-route-instanceId="@Model.Lecture.InstanceId" class="btn btn-danger font-weight-bold m-2 ml-auto">DELETE LECTURE</a>
+                            </div>
+                            <div class="ml-auto">
+                                <button type="submit" class="btn btn-warning font-weight-bold m-2 ml-auto">SAVE CHANGES</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card text-dark bg-light">
+                <div class="card-header bg-secondary text-center text-light">
+                    <h4>
+                        List of Resources
+                    </h4>
+                </div>
+                <div class="col-sm-10 ml-auto mr-auto">
+                    <hr />
+                        <div class="list-group">
+                            @{
+                                foreach (var resource in Model.Resources)
+                                {
+                                    <a asp-area="Trainer" asp-controller="Resources" asp-action="EditResource" asp-route-id="@resource.Id" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-primary">
+                                        @resource.Name
+                                    </a>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="ml-auto">
+                            <a asp-area="Trainer" asp-controller="Resources" asp-action="AddResource" asp-route-id="@Model.Lecture.LectureId" class="btn btn-success font-weight-bold m-2">ADD RESOURCE</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

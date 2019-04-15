@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<User> SignInManager
+@{
+    ViewData["Title"] = "Home Page";
+}
+<br />
+<h1 class="font-weight-bold">SOFTWARE ENGINEERING PROGRAM</h1>
+<h2 class="text-white font-weight-bold navbar ">LEARN PROGRAMMING FROM THE BEST TRAINERS IN BULGARIA</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            @if (!SignInManager.IsSignedIn(User))
+            {
+                <a class="primary-button button-large m-3" asp-area="Identity" asp-controller="Account" asp-action="Register">Apply</a>
+            }
+            else
+            {
+                <div class="m-4 p-1"> </div>
+            }
+            <div class="container">
+                <a class="secondary-button" href="/home/curriculum">Curriculum</a>
+                <a class="secondary-button" href="/home/about">About</a>
+            </div>
+        </div>
+        <div class="col-sm">
+            <img class="index-image" title="Програма по софтуерно инженерство" src="~/images/OurTeam.jpeg" alt="Softuni Trainers">
+        </div>
+    </div>
+</div>

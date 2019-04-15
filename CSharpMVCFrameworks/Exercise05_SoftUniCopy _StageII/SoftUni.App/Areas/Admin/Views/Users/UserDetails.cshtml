@@ -1,0 +1,69 @@
+﻿@model UserDetailsModel
+@{
+    ViewData["Title"] = "UserDetails";
+}
+
+@{
+    if (Model != null)
+    {
+        <div class="row">
+            <div>
+                <a asp-area="Admin" asp-controller="Users" asp-action="UsersList">
+                    <i class="fa fa-arrow-left m-2">All users</i>
+                </a>
+            </div>
+            <div class="ml-auto mr-auto">
+                <h1 class="h3">Details</h1>
+            </div>
+        </div>
+        <br />
+        <p class="h4">
+            Username: <strong>@Model.Username</strong>
+            <a asp-area="Admin" asp-controller="Users" asp-action="EditUser" asp-route-id="@Model.Id" class="btn btn-danger btn-lg m-2">Edit</a>
+        </p>
+
+    }
+}
+
+<span class="text-center text-danger h3">@ViewData["Message"]</span>
+
+@{
+    if (Model != null)
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Full Name</td>
+                    <td>@Model.FullName</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>@Model.Email</td>
+                </tr>
+                <tr>
+                    <td>EmailConfirmed</td>
+                    <td>@Model.EmailConfirmed</td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td>@Model.PhoneNumber</td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>@Model.Role</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Current state of user</td>
+                </tr>
+            </tfoot>
+        </table>
+    }
+}

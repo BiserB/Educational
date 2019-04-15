@@ -1,0 +1,76 @@
+﻿@model EditInstanceBindingModel
+@{
+    ViewData["Title"] = "Edit Instance";
+}
+<div class="row m-2">
+    <div>
+        <a asp-area="Trainer" asp-controller="Courses" asp-action="Index">
+            <i class="fa fa-arrow-left m-2">All cources</i>
+        </a>
+    </div>
+    <div>
+        <a asp-area="Trainer" asp-controller="Courses" asp-action="Details" asp-route-id="@Model.Instance.CourseId">
+            <i class="fa fa-arrow-left m-2">Back to the course</i>
+        </a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card text-dark bg-light">
+                <div class="card-header bg-warning text-center text-dark"><h4>Edit the instance.</h4></div>
+                <div class="col-sm-10 ml-auto mr-auto">
+                    <form asp-area="Trainer" asp-controller="Instances" asp-action="EditInstance" method="post">
+                        <hr />
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        @Html.FormGroupFor(model => model.Instance.Name)
+                        @Html.FormGroupFor(model => model.Instance.Description)
+                        @Html.FormGroupFor(model => model.Instance.StartDate)
+                        @Html.FormGroupFor(model => model.Instance.EndDate)
+                        <br />
+                        @Html.DropDownListFor(m => m.Instance.TrainerId, Model.Instance.AllTrainers, new { @class = "form-control" })
+                        <br />
+                        <input asp-for="Instance.CourseId" type="hidden" class="form-control" />
+                        <input asp-for="Instance.InstanceId" type="hidden" class="form-control" />
+                        <div class="row">
+                            <div class="mr-auto">
+                                <a asp-area="Trainer" asp-controller="Instances" asp-action="DeleteInstance" asp-route-id="@Model.Instance.InstanceId" asp-route-courseId="@Model.Instance.CourseId" class="btn btn-danger font-weight-bold m-2 ml-auto">DELETE INSTANCE</a>
+                            </div>
+                            <div class="ml-auto">
+                                <button type="submit" class="btn btn-warning font-weight-bold m-2 ml-auto">SAVE CHANGES</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card text-dark bg-light">
+                <div class="card-header bg-secondary text-center text-light">
+                    <h4>List of Lectures</h4>
+                </div>
+                <div class="col-sm-10 ml-auto mr-auto">
+                    <div class="card-body ">
+                        <div class="list-group">
+                            @{
+                                foreach (var lecture in Model.Lectures)
+                                {
+                                    <a asp-area="Trainer" asp-controller="Lectures" asp-action="EditLecture" asp-route-id="@lecture.Id" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action list-group-item-primary">
+                                        @lecture.Name
+                                        <span class="badge badge-primary badge-pill">5</span>
+                                    </a>
+                                }
+                            }
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="ml-auto">
+                                <a asp-area="Trainer" asp-controller="Lectures" asp-action="AddLecture" asp-route-id="@Model.Instance.InstanceId" class="btn btn-success font-weight-bold m-2">ADD LECTURE</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

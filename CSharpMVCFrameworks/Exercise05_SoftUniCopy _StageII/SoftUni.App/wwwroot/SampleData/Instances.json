@@ -1,0 +1,72 @@
+[
+  {
+    "Name": "Tech Module Jan 2014",
+    "Description": "Module: Tech Module / Jan 2014",
+    "StartDate": "2014-01-03",
+    "EndDate": "2014-04-03",
+    "CourseId": 1
+  },
+  {
+    "Name": "Tech Module Jan 2015",
+    "Description": "Module: Tech Module / Jan 2015",
+    "StartDate": "2015-01-03",
+    "EndDate": "2015-04-03",
+    "CourseId": 1
+  },
+  {
+    "Name": "Tech Module May 2016",
+    "Description": "Module: Tech Module / May 2016",
+    "StartDate": "2016-05-03",
+    "EndDate": "2016-08-03",
+    "CourseId": 1
+  },
+  {
+    "Name": "Tech Module May 2017",
+    "Description": "Module: Tech Module / May 2017",
+    "StartDate": "2014-05-03",
+    "EndDate": "2014-08-03",
+    "CourseId": 1
+  },
+  {
+    "Name": "C# Fundamentals May 2018",
+    "Description": "Description: C# Fundamentals",
+    "StartDate": "2018-05-23",
+    "EndDate": "2018-07-23",
+    "CourseId": 2
+  },
+  {
+    "Name": "C# Fundamentals May 2017",
+    "Description": "Description: C# Fundamentals",
+    "StartDate": "2017-05-23",
+    "EndDate": "2017-07-23",
+    "CourseId": 2
+  },
+  {
+    "Name": "C# Fundamentals May 2016",
+    "Description": "Description: C# Fundamentals",
+    "StartDate": "2016-05-23",
+    "EndDate": "2016-07-23",
+    "CourseId": 2
+  },
+  {
+    "Name": "C# Db Fundamentals Jan 2018",
+    "Description": "Description: C# Db Fundamentals",
+    "StartDate": "2018-01-20",
+    "EndDate": "2018-03-20",
+    "CourseId": 3
+  },
+  {
+    "Name": "Java DB Fundamentals March 2017",
+    "Description": "Description: Java DB Fundamentals",
+    "StartDate": "2017-03-24",
+    "EndDate": "2017-05-20",
+    "CourseId": 6
+  },
+  {
+    "Name": "Java Fundamentals Jan 2017",
+    "Description": "Description: Java Fundamentals",
+    "StartDate": "2017-01-20",
+    "EndDate": "2017-03-23",
+    "CourseId": 5
+  }
+]

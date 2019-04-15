@@ -1,0 +1,36 @@
+@using Microsoft.AspNetCore.Identity
+@using SoftUni.App.Common
+
+@inject UserManager<User> UserManager
+
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+        @if (User.IsInRole(RoleType.Trainer))
+        {
+            <a href="/Trainer/Courses/Index" class="nav-link text-warning">TRAINER PANEL</a>
+        }
+        else if (User.IsInRole(RoleType.SysAdmin))
+        {
+            <a href="/Admin/Manager/Panel" class="nav-link text-warning">MANAGER PANEL</a>
+        }
+        else
+        {
+            <a href="/" class="nav-link">HOME <span class="sr-only">(current)</span></a>
+        }
+    </li>
+    <li class="nav-item">
+        <a href="/home/about" class="nav-link">ABOUT AS</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            TRAININGS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/home/curriculum">Curriculum</a>
+            <div class="dropdown-divider"></div>
+        </div>
+    </li>
+    <li>
+        <a href="/home/contact" class="nav-link">CONTACT</a>
+    </li>
+</ul>
