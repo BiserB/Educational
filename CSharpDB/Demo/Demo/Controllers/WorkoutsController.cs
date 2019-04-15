@@ -13,7 +13,7 @@ namespace Demo.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class WorkoutsController : ControllerBase
     {
         private readonly WorkoutContext _context;

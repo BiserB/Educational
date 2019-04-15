@@ -1,0 +1,10 @@
+﻿@model UserInfoModel
+@{
+    ViewData["Title"] = "UserInfoModel";
+}
+<tr>
+    <td>@Model.Username</td>
+    <td>@Model.Email</td>
+    <td>@Model.FullName</td>
+    <td><a asp-area="Admin" asp-controller="Users" asp-action="UserDetails" asp-route-id="@Model.Id">Details</a></td>
+</tr>

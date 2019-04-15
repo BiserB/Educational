@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<UserInfoModel>
+@{
+    ViewData["Title"] = "UsersList";
+}
+
+<h2>UsersList</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Full Name</th>
+            <th>Details</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @Html.DisplayForModel()
+    </tbody>
+</table>
+
